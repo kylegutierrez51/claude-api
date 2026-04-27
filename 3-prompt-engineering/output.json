@@ -1,0 +1,55 @@
+[
+  {
+    "output": "```json\n[\n  \"mixed-methods approach\",\n  \"phenomenological analysis\",\n  \"neuroimaging\",\n  \"consciousness\",\n  \"meditative states\",\n  \"functional magnetic resonance imaging (fMRI)\",\n  \"mindfulness meditation\",\n  \"altered perception\",\n  \"default mode network\",\n  \"cognitive psychology\",\n  \"neuroscience\",\n  \"contemplative philosophy\",\n  \"metacognitive awareness\",\n  \"prefrontal cortex\",\n  \"independent component analysis (ICA)\",\n  \"machine learning\",\n  \"neural signatures\",\n  \"meditation depths\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study employs a mixed-methods approach combining qualitative phenomenological analysis with quantitative neuroimaging to investigate the neurobiology of consciousness during meditative states. Participants underwent functional magnetic resonance imaging (fMRI) while practicing mindfulness meditation, allowing researchers to correlate subjective reports of altered perception with objective measurements of default mode network activity. The research integrates cognitive psychology, neuroscience, and contemplative philosophy to examine how metacognitive awareness emerges from prefrontal cortex modulation. Advanced statistical modeling techniques, specifically independent component analysis (ICA) and machine learning classification algorithms, were applied to identify distinct neural signatures associated with different meditation depths."
+      },
+      "solution_criteria": [
+        "Identifies subject areas (consciousness, meditation, neurobiology, cognitive psychology, philosophy) distinct from methodologies (fMRI, phenomenological analysis, ICA, machine learning)",
+        "Extracts all major topics without duplicating methods as topics",
+        "Returns results as a JSON array of strings"
+      ],
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with a passage containing interdisciplinary topics mixed with specific methodologies to verify accurate topic extraction and distinction between methods and subject areas"
+    },
+    "score": 5,
+    "reasoning": "The solution violates the secondary criteria by failing to adequately distinguish between subject areas and methodologies. The criteria explicitly state topics should be 'distinct from methodologies' and avoid 'duplicating methods as topics.' The inclusion of phenomenological analysis, ICA, machine learning, and mixed-methods approach as topics directly contradicts this requirement. While the solution meets the mandatory requirements (valid JSON array of strings with no extra commentary), it has significant deficiencies in the secondary criteria regarding proper categorization of topics versus methods."
+  },
+  {
+    "output": "```json\n[\n  \"cultural hegemony\",\n  \"post-structuralist frameworks\",\n  \"dominant ideological systems\",\n  \"power relations\",\n  \"normalization\",\n  \"institutional structures\",\n  \"symbolic representations\",\n  \"affective economies\",\n  \"manufactured consent\",\n  \"subaltern populations\",\n  \"agency\",\n  \"structural determinism\",\n  \"human subjectivity\",\n  \"resistance\",\n  \"meaning-making\",\n  \"social reproduction\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The concept of cultural hegemony, as theorized through post-structuralist frameworks, reveals how dominant ideological systems maintain legitimacy not through coercive force alone, but through the subtle naturalization of power relations embedded within everyday practices and discursive formations. This process of normalization operates across multiple registers\u2014institutional structures, symbolic representations, and affective economies\u2014creating what scholars term 'manufactured consent,' wherein subaltern populations internalize the values and hierarchies that constrain their own agency. The interplay between structural determinism and human subjectivity thus becomes central to understanding how resistance emerges not as a predetermined outcome, but as contingent interventions within contested fields of meaning-making and social reproduction."
+      },
+      "solution_criteria": [
+        "Extracts major conceptual themes (e.g., cultural hegemony, power relations, ideology) distinct from concrete subjects",
+        "Distinguishes between abstract theoretical frameworks (post-structuralism) and the phenomena they explain",
+        "Captures related but distinct concepts that emerge from nuanced language (e.g., consent, agency, resistance) rather than collapsing them into single topics",
+        "Output is a valid JSON array of strings with no additional formatting"
+      ],
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with a passage from humanities/social sciences that uses abstract and nuanced language to assess how well the prompt distinguishes conceptual themes from concrete subjects"
+    },
+    "score": 9,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. It also meets the secondary criteria well by extracting major conceptual themes, distinguishing theoretical frameworks from phenomena, and capturing nuanced distinctions between related concepts. The extraction is comprehensive and demonstrates strong understanding of the text's theoretical content. Minor inconsistencies in conceptual granularity prevent a perfect score, but these are negligible relative to overall quality."
+  },
+  {
+    "output": "```json\n[\n  \"Neuroplasticity\",\n  \"Structural and functional reorganization\",\n  \"Experience-dependent learning\",\n  \"Neural adaptation mechanisms\",\n  \"Synaptic plasticity\",\n  \"Neurogenesis\",\n  \"Hippocampus\",\n  \"Long-term potentiation (LTP)\",\n  \"Long-term depression (LTD)\",\n  \"Memory consolidation\",\n  \"Critical periods\",\n  \"Sensory development\",\n  \"Motor learning\",\n  \"Environmental factors\",\n  \"Neural circuitry\",\n  \"Brain-derived neurotrophic factor (BDNF)\",\n  \"Growth factor signaling\",\n  \"Synaptic remodeling\",\n  \"Neuronal survival\",\n  \"Cognitive rehabilitation\",\n  \"Brain injury recovery\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Neuroplasticity encompasses the brain's capacity for structural and functional reorganization through experience, learning, and neural adaptation mechanisms. This phenomenon involves synaptic plasticity\u2014the strengthening or weakening of connections between neurons\u2014as well as neurogenesis, the formation of new neurons in specific brain regions like the hippocampus. Long-term potentiation (LTP) and long-term depression (LTD) represent complementary synaptic mechanisms underlying memory consolidation and learning processes. Furthermore, experience-dependent plasticity, including critical periods for sensory development and skill acquisition through motor learning, demonstrates how environmental factors shape neural circuitry. Recent research on brain-derived neurotrophic factor (BDNF) and growth factor signaling reveals molecular pathways that regulate both synaptic remodeling and neuronal survival, linking cellular mechanisms to behavioral outcomes in cognitive rehabilitation and recovery from brain injury."
+      },
+      "solution_criteria": [
+        "Distinguishes between distinct major topics (neuroplasticity, synaptic plasticity, neurogenesis, memory consolidation, experience-dependent plasticity) rather than treating them as a single concept",
+        "Avoids listing both broader concepts and their nested subtopics redundantly (e.g., includes either 'synaptic plasticity' or 'long-term potentiation/depression', not all three)",
+        "Captures key mechanisms and processes mentioned (BDNF, growth factor signaling, motor learning) as separate topics when they represent distinct concepts",
+        "Returns output as a valid JSON array of strings"
+      ],
+      "task_description": "Extract topics out of a passage of text from a scholarly article into a JSON array of strings",
+      "scenario": "Testing with a dense passage containing overlapping concepts, synonyms, and nested topics to evaluate whether the prompt correctly identifies distinct topics versus related subtopics"
+    },
+    "score": 6,
+    "reasoning": "The solution meets all three mandatory requirements: it contains a valid JSON array of strings, each entry is a topic without commentary, and the response contains only the JSON array. However, it significantly violates the secondary criteria regarding redundancy and hierarchical organization. The solution includes both parent concepts and their specific instantiations (synaptic plasticity with LTP/LTD), which the criteria explicitly warns against. While comprehensiveness is valuable, the criteria specifically ask to avoid treating nested subtopics redundantly. The solution errs on the side of over-inclusion rather than strategic topic selection. Despite these secondary criterion violations, the mandatory requirements are fully satisfied."
+  }
+]

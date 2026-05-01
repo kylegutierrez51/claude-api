@@ -1,6 +1,4 @@
 .venv
 .env
-api-intro.txt
-mcp.txt
-prompt-eval.txt
-prompt-engineering.txt
+*.txt
+.backups
